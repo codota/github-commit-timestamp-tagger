@@ -13,7 +13,7 @@ async function run() {
     const min = now.getMinutes() < 10 ? "0" + now.getMinutes() : now.getMinutes();
     const ss = now.getSeconds() < 10 ? "0" + now.getSeconds() : now.getSeconds();
     const timestamp = [yyyy, mm, dd, hh, min, ss].join("");
-    const tag = `${baseVersion}-${timestamp}`;
+    const tag = `${baseVersion}.${timestamp}`;
     const sha = github.context.sha;
 
     console.log(`Generating a tag with ${tag} for ${sha}.`);
